@@ -1,0 +1,53 @@
+@import '~antd/es/style/themes/default.less';
+
+@header-height: 100px;
+@footer-height: 100px;
+
+.invite {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .header {
+    flex: @header-height 0;
+    line-height: @header-height;
+    padding-left: 100px;
+    box-shadow: 2px 2px 2px 1px @shadow-color;
+  }
+
+  .body {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .title {
+        font-size: 30px;
+        line-height: 1.05;
+      }
+      .subTitle {
+        font-size: 22px;
+        margin-bottom: 1em;
+      }
+
+      button {
+        font-size: 22px;
+        height: 50px;
+      }
+    }
+  }
+
+  .footer {
+    flex: @footer-height 0;
+    padding: 30px;
+    text-align: center;
+    box-shadow: -2px -2px 2px 1px @shadow-color;
+  }
+}
