@@ -5,16 +5,9 @@ const config: IConfig =  {
   treeShaking: true,
   routes: [
     {
-      path: '/invite',
+      path: '/',
       component: '../pages/invite'
     },
-    {
-      path: '/',
-      component: '../layouts/index',
-      routes: [
-        { path: '/', component: '../pages/index' }
-      ]
-    }
   ],
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
@@ -36,6 +29,15 @@ const config: IConfig =  {
       },
     }],
   ],
+  // like browserslist
+  targets: {
+    ie: 11,
+  },
+  // browserslist: [
+  //   "> 1%",
+  //   "last 2 versions",
+  //   "not ie <= 10"
+  // ],
 }
 
 export default config;

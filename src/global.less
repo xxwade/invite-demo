@@ -8,3 +8,42 @@ body {
   margin: 0;
   color: @text-color;
 }
+
+.ant-modal {
+  .ant-modal-header {
+    border-bottom: none;
+
+    .ant-modal-underline {
+      display: inline-block;
+      width: 100px;
+      height: 1px;
+      background: @text-color;
+    }
+
+    .ant-modal-title {
+      text-align: center;
+    }
+  }
+
+  .ant-modal-header::after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    text-align: center;
+    margin-left: 128px;
+    border-top: 1px solid @text-color;
+  }
+
+  .success-message {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .error-message {
+    margin-top: 10px;
+    text-align: center;
+    color: @error-color;
+  }
+}
+

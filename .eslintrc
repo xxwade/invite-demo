@@ -1,3 +1,7 @@
 {
-  "extends": "eslint-config-umi"
+  "extends": "eslint-config-umi",
+  "rules": {
+    "@typescript-eslint/consistent-type-assertions": 0,
+    "jsx-a11y/heading-has-content": 0
+  }
 }
