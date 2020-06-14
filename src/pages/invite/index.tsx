@@ -1,6 +1,5 @@
 import { APP_NAME, COPYRIGHT } from '@/const/app';
 import React, { useCallback, useState } from 'react';
-
 import { Button } from 'antd'
 import { HeartFilled } from '@ant-design/icons';
 import InviteModal from './InviteModal';

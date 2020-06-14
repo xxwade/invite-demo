@@ -2,7 +2,7 @@ import { Button, Form, Input, Modal } from 'antd'
 import React, { useCallback, useState } from 'react';
 import { useRequest } from '@umijs/hooks';
 import { APP_NAME } from '@/const/app'
-import { sendInvition } from './api';
+import { sendInvition, ISendInvitionParams } from './api';
 
 interface IProps {
   visible: boolean;
@@ -37,13 +37,13 @@ export default function(props: IProps) {
    const onSuccessModalCancel = useCallback(() => {
     setSuccessModalVisible(false);
    }, [])
-  const onFinish = useCallback((values: any) => {
+  const onFinish = useCallback((values: ISendInvitionParams) => {
     run({
       name: values.name,
       email: values.email
     })
-  }, []);
-  const onValuesChange = useCallback((values) => {
+  }, [run]);
+  const onValuesChange = useCallback(() => {
     if (errorMsg) {
       setErrorMsg('')
     }
