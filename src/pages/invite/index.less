@@ -1,7 +1,7 @@
 @import '~antd/es/style/themes/default.less';
 
-@header-height: 100px;
-@footer-height: 100px;
+@header-height: 4em;
+@footer-height: 4em;
 
 .invite {
   display: flex;
@@ -11,8 +11,9 @@
   .header {
     flex: @header-height 0;
     line-height: @header-height;
-    padding-left: 100px;
+    padding-left: 2em;
     box-shadow: 2px 2px 2px 1px @shadow-color;
+    font-size: 1.5em;
   }
 
   .body {
@@ -29,19 +30,39 @@
       height: 100%;
 
       .title {
-        font-size: 30px;
+        font-size: 2em;
         line-height: 1.05;
       }
       .subTitle {
-        font-size: 22px;
+        font-size: 1.5em;
         margin-bottom: 1em;
       }
 
       button {
-        font-size: 22px;
-        height: 50px;
+        font-size: 1.5em;
+        height: 2.5em;
       }
     }
+
+    @media (max-width: @screen-sm-max) {
+      .container {
+        .title {
+          font-size: 1.4em;
+          line-height: 1.05;
+        }
+        .subTitle {
+          font-size: 1em;
+          margin-bottom: 1em;
+        }
+
+        button {
+          font-size: 1em;
+          height: 2.5em;
+        }
+      }
+    }
+
+
   }
 
   .footer {
